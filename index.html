@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shows</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+    <header class="header">
+        <h1 class="header-title"> Buscador de Shows </h1>
+        <div class="header-input">
+            <input type="search" id="search" class="header-input__search" placeholder="Buscar show de tv" autocomplete="off">
+        </div>
+    </header>
+    
+    <main class="main">
+        <section id="shows-query" class="grid-fluid">
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <section class="footer__section  footer__section-information">
+            <p id="year"></p>
+        </section>
+        <section class="footer__section footer__section-contact">
+            <p>Johan Davis Canchari Barzola</p>
+            <p>Johancanchary@gmail.com</p>
+        </section>
+    </footer>
+
+    <template id="show-template">
+        <div>
+            <h3></h3>
+            <div></div>
+            <img>
+            <div class="enlace">  
+            <a></a>
+            </div>
+        </div>
+    </template>
+
+
+
+    <script src="./app.js"></script>
+
+</body>
+</html>
