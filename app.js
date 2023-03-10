@@ -6,6 +6,9 @@ let $shows = document.getElementById("shows-query");
 let $buscar = document.getElementById("search");
 let $template = document.getElementById("show-template").content;
 let $fragment = document.createDocumentFragment();
+let $tema = document.getElementById('tema-pagina');
+let $cardShows = document.querySelectorAll('.card-shows');
+let body = document.body
 
 
 document.addEventListener("keypress", async (key) => {
@@ -17,8 +20,6 @@ document.addEventListener("keypress", async (key) => {
             let api = `https://api.tvmaze.com/search/shows?q=${contenido}`;
             let response = await fetch(api);
             let json = await response.json();
-
-            console.log(json);
 
             
             if(json.length == 0){
@@ -61,3 +62,23 @@ function ConseguirAño () {
 }
 $año.textContent = ConseguirAño();
 
+
+
+const temaOscuro = 'fa-regular fa-moon';
+const temaBlanco = 'fa-regular fa-sun';
+
+$tema.addEventListener('click', e => {
+
+    body.classList.toggle("active-body");
+
+    for(const card of $shows.children){
+        card.classList.toggle('active-section')
+    }
+
+    if(e.target.className === temaOscuro) {
+        e.target.className = temaBlanco;
+    }else {
+        e.target.className = temaOscuro;
+    }
+
+})
