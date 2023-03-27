@@ -1,16 +1,16 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 :root {
     --color-secondary: rgb(1, 12, 27);
     --color-textWhite: white;
     --color-extra: rgb(139, 170, 253);
     --color-themeWhite: white;
     --color-themeBlakc: #202020;
-}
-
-*,
-::after,
-::before {
-    box-sizing: border-box;
-    margin: 0;
 }
 
 html {
@@ -25,20 +25,13 @@ body {
     flex-direction: column;
 }
 
-
-
-
 .header {
-    flex: 1;
     text-align: center;
     display: flex;
     gap: 10px;
     flex-direction: column;
     align-items: center;
     background: var(--color-secondary);
-    position: fixed;
-    top: 0;
-    overflow: hidden;
     width: 100%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -78,14 +71,12 @@ body {
 }
 
 .main {
-    margin-top: 200px;
     flex: 1;
 }
 
 .grid-fluid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
+    gap: 5px;
+    columns: 5 400px;
 }
 
 .grid-fluid > .card-shows {
@@ -97,6 +88,10 @@ body {
     padding: 15px;
     background-color:rgb(18, 19, 22);
     color: var(--color-textWhite)
+}
+
+.card-shows .enlace {
+    text-align: center;
 }
 
 .grid-fluid > p {
@@ -116,13 +111,7 @@ body {
     padding-block: 15px;
     padding-inline: 30px;
     border-radius: 40px;
-}
-
-.grid-fluid .enlace {
-    flex: 1;
-    display: grid;
-    place-items: end;
-    justify-content: start;
+    object-fit: cover;
 }
 
 .loader {

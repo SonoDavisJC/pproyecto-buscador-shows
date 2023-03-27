@@ -2,13 +2,13 @@
 // https://www.tvmaze.com/api
 
 const $año = document.getElementById('year');
-let $shows = document.getElementById("shows-query");
-let $buscar = document.getElementById("search");
-let $template = document.getElementById("show-template").content;
-let $fragment = document.createDocumentFragment();
-let $tema = document.getElementById('tema-pagina');
-let $cardShows = document.querySelectorAll('.card-shows');
-let body = document.body
+const $shows = document.getElementById("shows-query");
+const $buscar = document.getElementById("search");
+const $template = document.getElementById("show-template").content;
+const $fragment = document.createDocumentFragment();
+const $tema = document.getElementById('tema-pagina');
+const $cardShows = document.querySelectorAll('.card-shows');
+const body = document.body
 
 
 document.addEventListener("keypress", async (key) => {
