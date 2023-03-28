@@ -29,7 +29,7 @@ document.addEventListener("keypress", async (key) => {
             else {
                 json.forEach(element => {
                     $template.querySelector('div').querySelector('h3').textContent = element.show.name;
-                    $template.querySelector('div').querySelector('div').innerHTML = element.show.summary ? element.show.summary: "Sin descripción";
+                    $template.querySelector('div').querySelector('p').innerHTML = element.show.summary ? element.show.summary: "Sin descripción";
                     $template.querySelector('div').querySelector('img').src = element.show.image ? element.show.image.medium : './assets/img/noimage.png';
                     $template.querySelector('div').querySelector('img').alt = element.show.name;
                     $template.querySelector('div').querySelector('a').href = element.show.url ? element.show.url : '#';
