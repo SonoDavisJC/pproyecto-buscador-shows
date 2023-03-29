@@ -110,7 +110,8 @@ main {
 
 .loader {
     display: block;
-    margin: auto;
+    margin-inline: auto;
+    margin-block: 60px;
 }
 
 .footer {
